@@ -95,7 +95,6 @@ public class ProductServiceTests {
 		Assertions.assertThrows(ResourceNotFoundException.class, () -> {
 			service.update(nonExistingId, productDto);
 		});
-		Mockito.verify(repository).findById(nonExistingId);
 	}
 	
 	@Test
