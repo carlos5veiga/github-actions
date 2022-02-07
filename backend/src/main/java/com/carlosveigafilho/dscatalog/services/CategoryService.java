@@ -35,8 +35,6 @@ public class CategoryService {
 		Optional<Category> obj = repository.findById(id);
 		Category entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
 		return new CategoryDTO(entity);
-// @formatter:on
-
 	}
 
 	@Transactional
